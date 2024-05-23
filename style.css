@@ -1,0 +1,239 @@
+/*=== GLOBALS =================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 400 1rem 'Poppins', sans-serif;
+  color: var(--Base-color);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/*=== VARIABLES =================================*/
+:root {
+  /* colors */
+  --Base-color: hsla(0, 0%, 0%, 1);
+  --Footer-color: hsla(0, 0%, 66%, 1);
+  --Footer-color-alt: hsl(0, 0%, 49%);
+
+  /* fonts */
+  --Heading: 700 2.25rem 'PT Serif', serif;
+  --Subtitle: 600 1.125rem 'Poppins', sans-serif;
+  --Paragraph: 400 0.875rem 'Poppins', sans-serif;
+  --Team-specialization: 400 0.625rem 'PT Serif', serif;
+  --Team-names: 600 0.875rem 'Poppins', sans-serif;
+  --Footer: 500 0.875rem 'Montserrat', sans-serif;
+}
+
+/*=== LAYOUT =================================*/
+#header .wrapper {
+  margin: 0 1.125rem 0 0.75rem;
+}
+
+main {
+  margin: 7.3rem 0;
+}
+
+#home .wrapper {
+  margin: 0 2.188rem 0 1.188rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.688rem;
+}
+
+/*=== STYLES =================================*/
+#header .header__text {
+  position: relative;
+  top: 4.438rem;
+}
+
+#header .header__text h1 {
+  font: var(--Heading);
+  margin-bottom: 2.375rem;
+}
+
+#header .header__subtitle h2 {
+  text-transform: uppercase;
+  font: var(--Subtitle);
+  margin-bottom: 0.625rem;
+}
+
+#header .header__subtitle p {
+  font: var(--Paragraph);
+}
+
+#home .team .pst {
+  position: relative;
+  top: 4.133rem;
+}
+
+#home .team .photo__box h4 {
+  transform: translateX(57%) rotate(90deg);
+  position: relative;
+  top: 4.75rem;
+  font: var(--Team-specialization);
+  text-transform: uppercase;
+}
+
+#home .team .photo__box h3 {
+  margin-top: 0.37rem;
+  font: var(--Team-names);
+}
+
+#footer {
+  text-align: center;
+}
+
+#footer span {
+  color: var(--Footer-color);
+}
+
+#footer span a {
+  color: var(--Footer-color-alt);
+  font-weight: bold;
+  transition: 400ms;
+}
+
+#footer span a:hover {
+  color: hsl(204, 64%, 56%);
+}
+
+/*=== RESPONSIVE =================================*/
+@media (min-width: 424px) {
+  #home .team .photo__box h4 {
+    top: 5.65rem;
+  }
+}
+
+@media (min-width: 576px) {
+  /* variables */
+  :root {
+    --Paragraph: 400 1.125rem 'Poppins', sans-serif;
+    --Team-specialization: 400 0.75rem 'PT Serif', serif;
+    --Team-names: 600 1.125rem 'Poppins', sans-serif;
+  }
+
+  main {
+    margin: 8.92rem 0;
+  }
+
+  .grid {
+    gap: 3rem;
+  }
+
+  #home .team .photo__box h4 {
+    top: 8.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* layout */
+  #header .wrapper,
+  #home .wrapper {
+    margin: 0 auto;
+  }
+
+  #header .wrapper {
+    max-width: 760px;
+  }
+
+  main {
+    margin: 11rem 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    gap: 3.4rem;
+    place-content: center;
+  }
+
+  /* styles */
+  #header .header__text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #header .header__text h1 {
+    letter-spacing: -0.045em;
+    margin: 0;
+  }
+
+  #header .header__subtitle {
+    width: 27.438rem;
+  }
+
+  #home .team .pst {
+    top: 5.6rem;
+  }
+
+  #home #skylah.pst,
+  #home #stan.pst {
+    top: 0;
+  }
+
+  #home #griff {
+    position: relative;
+    top: 5.6rem;
+  }
+
+  #home .team .photo__box h4 {
+    top: 6.85rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* layout */
+  #header .wrapper,
+  #home .wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 237px);
+    gap: 6.1rem;
+    place-content: center;
+  }
+
+  /* styles */
+  #header .header__text {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #home .team .photo__box h4 {
+    top: 7.95rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* variables */
+  :root {
+    --Paragraph: 400 1.125rem 'Poppins', sans-serif;
+    --Team-specialization: 400 0.75rem 'PT Serif', serif;
+    --Team-names: 600 1.125rem 'Poppins', sans-serif;
+  }
+
+  /* layout */
+  #header .wrapper,
+  #home .wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+}
